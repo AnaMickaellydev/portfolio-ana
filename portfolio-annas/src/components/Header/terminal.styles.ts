@@ -8,7 +8,8 @@ export const HeaderBar = styled.div`
   gap: 12px;
   padding: 10px 14px;
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  background: rgba(18, 18, 28, 0.7);
+  background: ${({ theme }) => theme.terminal.bar};
+  border-bottom: 1px solid rgba(255, 0, 204, 0.3);
   backdrop-filter: blur(6px);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -47,9 +48,9 @@ export const Tabs = styled.nav.attrs({ role: "tablist" })`
 `;
 
 export const Tab = styled.button.attrs<{ active?: boolean }>(p => ({
-  role: "tab",
-  "aria-selected": p.active ?? false,
-}))<{ active?: boolean }>`
+    role: "tab",
+    "aria-selected": p.active ?? false,
+})) <{ active?: boolean }>`
   padding: 6px 10px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.06);
