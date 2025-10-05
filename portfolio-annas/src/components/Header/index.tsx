@@ -7,19 +7,24 @@ import {
   FloatingPixel
 } from "./styles";
 
+import TerminalFrame from "./TerminalFrame";
+
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <TerminalBox>
-        <Name>Ana Aguiar</Name>
-        <Slogan>Developer</Slogan>
-      </TerminalBox>
+      <TerminalFrame activeTab="about.sh">\
+        <TerminalBox style={{ marginBottom: 12 }}>
+          <Name>Ana Mickaelly</Name>
+          <Slogan>Front-End Developer</Slogan>
+        </TerminalBox>
 
-      {/* Floating pixels */}
+       
+      </TerminalFrame>
+\w
       <FloatingPixel size={12} top="10%" left="15%" color="#ff00cc" />
-      <FloatingPixel size={8} top="30%" left="70%" color="#00ffea" />
-      <FloatingPixel size={10} top="60%" left="40%" color="#3333ff" />
-      <FloatingPixel size={6} top="80%" left="80%" color="#ff00cc" />
+      <FloatingPixel size={8}  top="28%" left="72%" color="#00ffea" />
+      <FloatingPixel size={10} top="62%" left="40%" color="#3333ff" />
+      <FloatingPixel size={6}  top="82%" left="82%" color="#ff00cc" />
     </HeaderContainer>
   );
 };
